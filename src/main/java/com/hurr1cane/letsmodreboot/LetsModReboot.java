@@ -15,7 +15,7 @@ public class LetsModReboot
     @Mod.Instance(Reference.MOD_ID)
     public static LetsModReboot instance;
 
-    @SidedProxy(clientSide ="com.hurr1cane.letsmodreboot.proxy.ClientProxy",serverSide ="com,hurr1cane.letsmodreboot.proxy.ServerProxy")
+    @SidedProxy(clientSide ="com.hurr1cane.letsmodreboot.proxy.ClientProxy",serverSide ="com.hurr1cane.letsmodreboot.proxy.ServerProxy")
     public static IProxy proxy;
 
     @Mod.EventHandler
