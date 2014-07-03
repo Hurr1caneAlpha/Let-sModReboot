@@ -1,5 +1,6 @@
 package com.hurr1cane.letsmodreboot;
 
+import com.hurr1cane.letsmodreboot.configuration.ConfigurationHandler;
 import com.hurr1cane.letsmodreboot.proxy.IProxy;
 import com.hurr1cane.letsmodreboot.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -15,7 +16,7 @@ public class LetsModReboot
     @Mod.Instance(Reference.MOD_ID)
     public static LetsModReboot instance;
 
-    @SidedProxy(clientSide ="com.hurr1cane.letsmodreboot.proxy.ClientProxy",serverSide ="com.hurr1cane.letsmodreboot.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY,serverSide =Reference.SERVER_PROXY)
     public static IProxy proxy;
 
     @Mod.EventHandler
@@ -27,7 +28,7 @@ public class LetsModReboot
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event)
     {
-
+        ConfigurationHandler.init()
     }
 
     @Mod.EventHandler
