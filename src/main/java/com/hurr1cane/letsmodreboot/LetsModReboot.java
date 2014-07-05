@@ -1,6 +1,7 @@
 package com.hurr1cane.letsmodreboot;
 
 import com.hurr1cane.letsmodreboot.handler.ConfigurationHandler;
+import com.hurr1cane.letsmodreboot.init.ModItems;
 import com.hurr1cane.letsmodreboot.proxy.IProxy;
 import com.hurr1cane.letsmodreboot.reference.Reference;
 import com.hurr1cane.letsmodreboot.util.LogHelper;
@@ -26,6 +27,8 @@ public class LetsModReboot
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete!");
+
+        ModItems.init();
     }
 
     @Mod.EventHandler
