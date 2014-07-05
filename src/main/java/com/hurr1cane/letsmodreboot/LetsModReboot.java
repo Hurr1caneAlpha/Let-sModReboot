@@ -4,6 +4,7 @@ import com.hurr1cane.letsmodreboot.handler.ConfigurationHandler;
 import com.hurr1cane.letsmodreboot.proxy.IProxy;
 import com.hurr1cane.letsmodreboot.reference.Reference;
 import com.hurr1cane.letsmodreboot.util.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,6 +24,7 @@ public class LetsModReboot
     public void preInit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete!");
     }
 
@@ -38,7 +40,3 @@ public class LetsModReboot
         LogHelper.info("Post Initialization Complete!");
     }
 }
-
-
-
-
