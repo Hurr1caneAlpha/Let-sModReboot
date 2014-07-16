@@ -1,12 +1,14 @@
 package com.hurr1cane.letsmodreboot.item;
 
 import com.hurr1cane.letsmodreboot.reference.Reference;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+@GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ItemLMRB extends Item
 {
     public ItemLMRB()
